@@ -1,0 +1,208 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
+html,body{
+  overflow: hidden;
+}
+
+header{
+  position: fixed;
+  background: black;
+  width: 100vw;
+  height: 100px;
+}
+
+:root{
+  --primary-color:black;
+  --secondary-color:rgb(0, 76, 255);
+}
+
+.corpo{
+
+  padding-top: 100px;
+  width:100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.corpo img{
+  width:  360px;
+  height: 360px;
+}
+
+.corpo .music-artist{
+  position: relative;
+  top: -1rem;
+  margin: 0 0 2rem 0;
+}
+
+.corpo .timing{
+  width: 90%;
+  flex-direction: column;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.corpo .timing .text-time{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.corpo .timing .seekBarbox {
+  width: 100%;
+  height: 3px;
+  display: flex;
+  align-items: center;
+  background: #6f6f6f93;
+}
+.corpo .timing .seekBarbox .seekbar {
+  width: 0%;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: end;
+}
+
+.seekbar::after{
+  position: relative;
+  top: -5px;
+  left: 5px;
+  border-radius: 50%;
+  content: "";
+  min-width:  13px;
+  height: 13px;
+  background: cornflowerblue;
+}
+
+.corpo .box-buttons{
+  width: 90%;
+  display: flex;
+  gap: 2.4rem;
+  justify-content: center;
+}
+
+
+
+.corpo .box-buttons2{
+  width: 90%;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+.corpo .box-buttons2 button{
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 0;
+}
+
+.corpo .box-buttons2 button i{
+ font-size: 1.4rem;
+}
+
+.fa-solid.fa-repeat.ativa{
+  color:cyan;
+}
+
+.corpo .box-buttons .btn{
+  background: none;
+  border: 0;
+}
+
+.corpo .box-buttons .btn i {
+  font-size: 2rem;
+}
+
+.corpo .box-buttons .btn .fa-solid.fa-backward {
+  font-size: 1.4rem;
+  margin-top: 5px;
+}
+.corpo .box-buttons .btn .fa-solid.fa-forward{
+  font-size: 1.4rem;
+  margin-top: 5px;
+}
+
+#pause{
+  display: none;
+}
+
+
+#btsOpen{
+
+  z-index: 3;
+  transition: all 0.5s;
+  position: relative;
+  margin-top: -1.6rem;
+  background: none;
+  border: 0;
+  font-size: 2rem;
+}
+
+.bts-open{
+  z-index: 3;
+  transform: rotate(180deg);
+}
+
+
+
+#btsClose{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: none;
+}
+
+
+/*===============================================================*/
+
+.corpoList{
+  
+  padding-top: 30px;
+  transition: all 0.4s;
+  position: absolute;
+  top: 95%;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  backdrop-filter: blur(4px) saturate(94%);
+  -webkit-backdrop-filter: blur(4px) saturate(94%);
+  background-color: rgba(17, 25, 40, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  
+}
+
+.corpoList.ativa{
+  top: 100px;
+}
+
+.list-music{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+}
+ .list-music li{
+  background: var(--secondary-color);
+  padding: 10px 5px;
+  font-size: medium;
+ }
+
+ .list-music li p{
+  font-size: small;
+  color: rgb(189, 189, 189);
+ }

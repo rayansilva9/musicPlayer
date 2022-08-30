@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/2f8fe10989.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background: black">
+    <header></header>
+    
+    <audio id="audio" src=""></audio>
+    <div class="corpo">
+      <img src="" alt="" />
+      <h1 class="music-name">Music Name</h1>
+      <p class="music-artist">Nome do Artista</p>
+      <div class="timing">
+        <div class="seekBarbox">
+          <div class="seekbar"></div>
+        </div>
+        <div class="text-time">
+          <p id="currentTime"></p>
+          <p id="duration"></p>
+        </div>
+      </div>
+      <div class="box-buttons2">
+        <button onclick="alternateRepeat()"><i id="repeatbtn" class="fa-solid fa-repeat"></i></button>
+        <button></button>
+        <button></button>
+      </div>
+     
+      <div class="box-buttons">
+        <button id="" onclick="backward()" class="btn">
+          <i class="fa-solid fa-backward"></i>
+        </button>
+        <button id="" onclick="Prev()" class="btn">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+        <button id="play" onclick="Play()" class="btn">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="pause" onclick="Pause()" class="btn">
+          <i class="fa-solid fa-pause"></i>
+        </button>
+        <button id="" onclick="Next()" class="btn">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+        <button id="" onclick="forward()" class="btn">
+          <i class="fa-solid fa-forward"></i>
+        </button>
+      </div>
+     
+    </div>
+    <div class="corpoList">
+      <button id="btsOpen" class="">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+
+      <ul class="list-music">
+        <li>
+          Nome da Musica <br />
+          <p>Nome do Artista</p>
+        </li>
+        <li>
+          Nome da Musica <br />
+          <p>Nome do Artista</p>
+        </li>
+        <li>
+          Nome da Musica <br />
+          <p>Nome do Artista</p>
+        </li>
+        <li>
+          Nome da Musica <br />
+          <p>Nome do Artista</p>
+        </li>
+        <li>
+          Nome da Musica <br />
+          <p>Nome do Artista</p>
+        </li>
+      </ul>
+    </div>
+
+    <script src="firebase.js" type="module"></script>
+    <script src="musicApp.js"></script>
+
+  </body>
+</html>
